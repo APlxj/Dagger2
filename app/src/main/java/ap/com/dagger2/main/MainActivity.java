@@ -17,13 +17,13 @@ public class MainActivity extends BaseActivity implements MainView {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mainPresenter = new MainPresenter(this);
         DaggerMainComponent.builder()
                 .mainModule(new MainModule(this))
                 .build()
                 .inject(this);
         init();
         mainPresenter.loadData();
+        mainPresenter.save();
     }
 
     TextView msg;
@@ -35,5 +35,20 @@ public class MainActivity extends BaseActivity implements MainView {
     @Override
     public void updateUI() {
         msg.setText("依赖添加成功");
+    }
+
+    @Override
+    public void save() {
+
+    }
+
+    @Override
+    public void saveAndAdd() {
+
+    }
+
+    @Override
+    public void delete() {
+
     }
 }

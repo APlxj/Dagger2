@@ -25,4 +25,8 @@ public class MainPresenter {
         //回调方法成功时
         mView.updateUI();
     }
+
+    public void save() {
+        mView.save();
+    }
 }

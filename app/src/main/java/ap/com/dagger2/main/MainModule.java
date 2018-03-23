@@ -13,7 +13,7 @@ import dagger.Provides;
 @Module
 public class MainModule {
 
-    MainView view;
+    private MainView view;
 
     public MainModule(MainView view) {
         this.view = view;

@@ -10,4 +10,10 @@ package ap.com.dagger2.main;
 public interface MainView{
 
     void updateUI();
+
+    void save();
+
+    void saveAndAdd();
+
+    void delete();
 }
